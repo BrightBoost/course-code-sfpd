@@ -4,6 +4,15 @@ public class Person {
     private String name;
     private int age;
     private Address address;
+    private boolean busy;
+
+    public boolean isBusy() {
+        return busy;
+    }
+
+    public void setBusy(boolean busy) {
+        this.busy = busy;
+    }
 
     public void printPersonAddress(){
         System.out.println(address.getCity());

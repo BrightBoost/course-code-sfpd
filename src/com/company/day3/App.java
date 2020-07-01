@@ -17,24 +17,43 @@ public class App {
         System.out.println(mrBlabla.getAddress().getCity());
         mrBlabla.cleanHouse();
 
-        int x = 8;
-        int y = 22;
+        int x = 1;
+        int y = 2;
         //write if statement for case where x < y and x > y
 
-        if(5 < 3){
-            System.out.println("5 is smaller than second nr");
+        if(x < y){
+            System.out.println(x + " is smaller than second nr" + y);
+        } else if(x > y) {
+            System.out.println(x + " is bigger than second nr" + y);
         } else {
-            System.out.println("5 is not smaller than second nr");
+            System.out.println("numbers are equal " +x);
         }
 
         mrBlabla.getAddress().setClean(false);
         System.out.println("the house is clean: " + mrBlabla.getAddress().isClean());
 
-        if(mrBlabla.getAddress().isClean() == true) {
-            System.out.println("i dont need to clean a clean house");
-        } else {
+        //not clean, busy
+        if(!mrBlabla.getAddress().isClean() && mrBlabla.isBusy()) {
+            System.out.println("i will clean the house as soon as i have time");
+        }
+        //not clean, not busy
+        else if(!mrBlabla.getAddress().isClean() && !mrBlabla.isBusy()) {
+            System.out.println("let's clean the house, i have time");
             mrBlabla.cleanHouse();
         }
+        //clean, not busy
+        else if(mrBlabla.getAddress().isClean() && !mrBlabla.isBusy()){
+            System.out.println("hmm the house is clean, but i have nothing to do. Lets walk my pet");
+        }
+        //house clean and he is busy
+        else {
+            System.out.println("it's a good thing i've cleaned the house, because im very busy");
+        }
+
+        if(!mrBlabla.isBusy() || !mrBlabla.getAddress().isClean()){
+            System.out.println("im going to clean the house");
+        }
+
 
         System.out.println("the house is clean: " + mrBlabla.getAddress().isClean());
 
