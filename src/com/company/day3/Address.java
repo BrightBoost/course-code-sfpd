@@ -4,6 +4,15 @@ public class Address {
     private String city;
     private String streetName;
     private String nr;
+    private boolean clean;
+
+    public boolean isClean() {
+        return clean;
+    }
+
+    public void setClean(boolean clean) {
+        this.clean = clean;
+    }
 
     public String getCity() {
         return city;

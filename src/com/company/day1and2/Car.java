@@ -1,6 +1,4 @@
-package com.company;
-
-import java.time.LocalDate;
+package com.company.day1and2;
 
 public class Car extends Vehicle {
     private String licensePlate;

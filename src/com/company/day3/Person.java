@@ -35,5 +35,6 @@ public class Person {
     public void cleanHouse(){
         Vacuumcleaner vacuumcleaner = new Vacuumcleaner();
         vacuumcleaner.vacuum(address);
+        address.setClean(true);
     }
 }
