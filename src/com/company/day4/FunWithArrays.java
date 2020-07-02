@@ -2,6 +2,8 @@ package com.company.day4;
 
 import com.company.day3.Address;
 
+import java.util.Arrays;
+
 public class FunWithArrays {
     public static void main(String[] args) {
         //fixed length, length always need to be known upon array creation
@@ -34,6 +36,28 @@ public class FunWithArrays {
         //looping though an array
         for(int i = 0; i < arrayInt.length; i++){
             System.out.println(arrayInt[i]);
+        }
+
+        Arrays.sort(arrayInt);
+        for(int i = 0; i < arrayInt.length; i++){
+            System.out.println(arrayInt[i]);
+        }
+
+        int[][] multiInt = new int[2][];
+        multiInt[0] = new int[5];
+        multiInt[0][0] = 2;
+        multiInt[0][1] = 3;
+        multiInt[0][2] = 4;
+        multiInt[1] = new int[3];
+        multiInt[1][0] = 4;
+        multiInt[1][1] = 56;
+        multiInt[1][2] = 34;
+
+        for(int i = 0; i < multiInt.length; i++){
+            System.out.println(multiInt[i]);
+            for(int j = 0; j < multiInt[i].length; j++){
+                System.out.println(multiInt[i][j]);
+            }
         }
     }
 }
