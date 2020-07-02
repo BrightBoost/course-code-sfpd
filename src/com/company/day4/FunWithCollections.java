@@ -34,6 +34,29 @@ public class FunWithCollections {
         stringList.clear();
 
 
-        //foreach
+       List<Integer> integerList = new ArrayList<>();
+       integerList.add(9);
+       integerList.add(new Integer(2));
+       integerList.add(5);
+       integerList.add(3434);
+
+       for(Integer i : integerList){
+           System.out.println(i);
+       }
+
+       List<String> stringList1 = new ArrayList<>();
+       stringList1.add("good question Hafida");
+       stringList1.add("something else");
+
+       //for every String in our stringList1,
+       // we call it s for each iteration, do:
+       for(String s : stringList1){
+           System.out.println(s);
+       }
+
+       for(int i = 0; i < stringList1.size(); i++){
+           System.out.println(stringList1.get(i));
+       }
+
     }
 }

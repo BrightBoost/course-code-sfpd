@@ -19,8 +19,8 @@ public class FunWithArrays {
         System.out.println(arrayInt[2]);
 
         //different way of writing, it does a count to get the fixed length
-        int[] arrayInt2 = {6,1,232323,32,73,1,3,4,7,8,9};
-        arrayInt2[4] = 23;
+        int[] arrayInt22 = {6,1,232323,32,73,1,3,4,7,8,9};
+        arrayInt22[4] = 23;
 
         //array of anything
         Address[] addresses = new Address[3];
@@ -33,9 +33,11 @@ public class FunWithArrays {
         System.out.println(addresses.length);
         System.out.println(addresses[0].getCity());
 
+        int[] arrayInt2 = {6,1,232323,32,73,1,3,4,7,8,9};
+
         //looping though an array
-        for(int i = 0; i < arrayInt.length; i++){
-            System.out.println(arrayInt[i]);
+        for(int i = 0; i < arrayInt2.length; i++){
+            System.out.println(arrayInt2[i]);
         }
 
         Arrays.sort(arrayInt);
