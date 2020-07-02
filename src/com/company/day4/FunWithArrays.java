@@ -53,11 +53,43 @@ public class FunWithArrays {
         multiInt[1][1] = 56;
         multiInt[1][2] = 34;
 
+        //generate random nr between 0 and 100
+        int x = (int)(Math.random() * 100);
+
+
         for(int i = 0; i < multiInt.length; i++){
             System.out.println(multiInt[i]);
             for(int j = 0; j < multiInt[i].length; j++){
                 System.out.println(multiInt[i][j]);
             }
+        }
+
+        //summing rows
+        double[][] sumRow = new double[3][5];
+        sumRow[0][0] = 1;
+        sumRow[0][1] = .5;
+        sumRow[0][2] = 2;
+        sumRow[0][3] = 3;
+        sumRow[0][4] = 4;
+        sumRow[1][0] = 5;
+        sumRow[1][1] = .5;
+        sumRow[1][2] = 6;
+        sumRow[1][3] = 7;
+        sumRow[1][4] = 8;
+        sumRow[2][0] = 9;
+        sumRow[2][1] = .5;
+        sumRow[2][2] = 1;
+        sumRow[2][3] = 3;
+        sumRow[2][4] = 1;
+
+        for(int row = 0; row < sumRow.length; row++) {
+            System.out.println(sumRow[row]);
+            double sum = 0;
+            for(int column = 0; column < sumRow[row].length; column++){
+                System.out.println("row " + row + " column "+ column +": " + sumRow[row][column]);
+                sum = sum + sumRow[row][column];
+            }
+            System.out.println("total for row: " + row + " is " + sum);
         }
     }
 }
