@@ -8,6 +8,7 @@ public class Main {
         Facility f = new Facility();
         f.setName("sauna");
         gym.addFacility(f);
+        f.setName("tanning bed");
         gym.addFacility(89,"big pool", false);
 
         for(Facility facility : gym.getFacilities()){
