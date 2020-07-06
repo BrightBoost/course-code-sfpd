@@ -60,9 +60,9 @@ public class FunWithArrays {
 
 
         for(int i = 0; i < multiInt.length; i++){
-            System.out.println(multiInt[i]);
+            System.out.println("print x" + multiInt[i]);
             for(int j = 0; j < multiInt[i].length; j++){
-                System.out.println(multiInt[i][j]);
+                System.out.println("print xy" + multiInt[i][j]);
             }
         }
 
