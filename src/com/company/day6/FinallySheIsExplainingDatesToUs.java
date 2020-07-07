@@ -4,6 +4,8 @@ import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.LocalTime;
 import java.time.Month;
+import java.time.format.DateTimeFormatter;
+import java.time.format.FormatStyle;
 
 public class FinallySheIsExplainingDatesToUs {
     public static void main(String[] args) {
@@ -26,6 +28,9 @@ public class FinallySheIsExplainingDatesToUs {
         System.out.println(ldt2);
 
         //lets do some calculations
+        //you need to capture the result of the calculation
+        //because it doesnt change the variable you call the
+        //operation on (like the String class)
         lt.plusHours(1);
         ldt2 = ldt2.plusMonths(2);
         ldt2 = ldt2.plusDays(60);
@@ -37,5 +42,19 @@ public class FinallySheIsExplainingDatesToUs {
         //your time of birth
         //create the ldt using both
 
+        //formatting
+        LocalDate today = LocalDate.now();
+
+        String formattedDate = today.format(DateTimeFormatter.ofLocalizedDate(FormatStyle.LONG));
+        System.out.println("LONG format: " + formattedDate);
+
+        formattedDate = today.format(DateTimeFormatter.ofLocalizedDate(FormatStyle.MEDIUM));
+        System.out.println("MEDIUM format: " + formattedDate);
+
+        formattedDate = today.format(DateTimeFormatter.ofLocalizedDate(FormatStyle.SHORT));
+        System.out.println("SHORT format: " + formattedDate);
+
+        formattedDate = today.format(DateTimeFormatter.ofLocalizedDate(FormatStyle.FULL));
+        System.out.println("FULL format: " + formattedDate);
     }
 }
