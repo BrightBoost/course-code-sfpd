@@ -31,4 +31,11 @@ public class Dog extends Animal {
         //the input parameter
         this.breed = breed;
     }
+
+    //use this constructor to set name and age upon creation of dog
+    //calls parent constructor to set name and age
+    public Dog(String name, int age, String breed) {
+        super(name, age);
+        this.breed = breed;
+    }
 }

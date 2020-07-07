@@ -12,6 +12,7 @@ public class Main {
         //now create dog with breed variable
         Dog d1 = new Dog("chihuahua");
 
+        Dog d2 = new Dog("Java", 5, "Labradoodle");
 
     }
 }
