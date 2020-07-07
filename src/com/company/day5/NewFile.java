@@ -1,5 +1,9 @@
 package com.company.day5;
 
 public class NewFile {
-  //super valuable edit online
+
+    public static void main(String[] args) {
+        StringExplanation stringExplanation = new StringExplanation();
+        System.out.println(stringExplanation.makingMyPointWithStrings(new String("hi")));
+    }
 }

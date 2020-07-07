@@ -15,5 +15,7 @@ public class Main {
             System.out.println(facility.getName());
         }
 
+        System.out.println("€");
+
     }
 }
