@@ -1,5 +1,7 @@
 package com.company.day7;
 
+import com.sun.xml.internal.ws.policy.privateutil.PolicyUtils;
+
 import java.io.*;
 
 public class ReadWrite {
@@ -25,10 +27,10 @@ public class ReadWrite {
             //create a list of strings
             //write all these strings to a file
 
-
+        FileReader fileReader = null;
 // Read the content from file
         try {
-            FileReader fileReader = new FileReader(absolutePath);
+            fileReader = new FileReader(absolutePath);
             int ch;
             //end of file character is -1
             //range of char is between 0 and 65535
@@ -37,7 +39,6 @@ public class ReadWrite {
             while((ch = fileReader.read()) != -1) {
                 System.out.print((char)ch);
             }
-            fileReader.close();
 
         } catch (FileNotFoundException e) {
             // Exception handling
@@ -45,12 +46,36 @@ public class ReadWrite {
         } catch (IOException e) {
             System.out.println("something else IO like went wrong");
             // Exception handling
+        } finally {
+            //we have to close our filereader in the finally block
+            //the finally block is always executed
+            //so better to close it here, than in a try block that might not finish,
+            //but throw an exception halfway
+            //leaving the filereader open forever and ever etc
+
+            if(fileReader != null){
+                try {
+                    fileReader.close();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+        }
+
+        //try with resources
+        //you open the resource(in this case filereader) in ( and ) after try
+        //java closes the resources opened here for you
+        //so you don't need the ugly finally block as you had in the example above
+        try(FileReader fileReader1 = new FileReader(absolutePath); FileWriter fileWriter = new FileWriter("blabla.txt")){
+            //some code to read a file
+        }catch (IOException e){
+            System.out.println("blabla");
         }
 
         //exercise
         //what you have just written to your file
         //you are going to read
         //and write to another file
-        //what is the result?
+        //what is the result? and why?
     }
 }
