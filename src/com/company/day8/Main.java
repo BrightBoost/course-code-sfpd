@@ -56,6 +56,15 @@ public class Main {
 
 
         //---------------end with static initializers----------
+        //create a new class - describing a resident of belgium
+        //give this class some approriate fields
+        //give this class a static field ruler to store king or queen
+        //from your main
+        //create a few residents
+        //change the ruler
+        //verify it will be changed for all of them
+
+
 
     }
 
