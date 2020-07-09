@@ -1,12 +1,18 @@
 package com.company.day8;
 
 
+import java.time.LocalDateTime;
 import java.util.List;
 
 public class StaticClass {
     private int someInt;
     private List<String> someList;
 
+    public static void someStaticMethods(){
+        System.out.println(Math.random());
+        System.out.println(LocalDateTime.of(2020,5,5,5,5));
+        System.out.println(LocalDateTime.now());
+    }
     public static int someStaticInt;
     //constant
     public static final int constInt = 8;
