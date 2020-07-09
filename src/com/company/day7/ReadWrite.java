@@ -2,6 +2,7 @@ package com.company.day7;
 
 import com.sun.xml.internal.ws.policy.privateutil.PolicyUtils;
 
+import javax.sql.rowset.Predicate;
 import java.io.*;
 
 public class ReadWrite {
