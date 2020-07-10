@@ -6,7 +6,7 @@ public class Mouse extends Mammal implements Prey {
         super(name);
     }
 
-    @Override
+   // @Override
     public void eat(){
         System.out.println("mouse is eating");
     }

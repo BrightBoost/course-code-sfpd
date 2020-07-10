@@ -13,7 +13,9 @@ public abstract class Animal {
 
     //because its abstract, there is no body, so no { and }, but a ; instead
     //child classes that are not abstract, must implement this method
-    public abstract void eat();
+    public void eat(){
+        System.out.println("animal eating");
+    }
 
     public Animal(String name){
         this.name = name;

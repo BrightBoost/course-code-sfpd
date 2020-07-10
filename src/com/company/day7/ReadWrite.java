@@ -1,12 +1,13 @@
 package com.company.day7;
 
+import com.company.day6.Animal;
 import com.sun.xml.internal.ws.policy.privateutil.PolicyUtils;
 
 import javax.sql.rowset.Predicate;
 import java.io.*;
 
 public class ReadWrite {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
         String directory = System.getProperty("user.home");
         String fileName = "example.txt";
         String absolutePath = directory + File.separator + fileName;

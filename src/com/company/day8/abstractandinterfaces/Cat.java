@@ -21,10 +21,7 @@ public class Cat extends Mammal implements Predator, Prey {
         System.out.println("cat is catching");
     }
 
-    @Override
-    public void eatPrey(Prey prey) {
-        System.out.println("cat is eating");
-    }
+
 
     @Override
     public void runAndHide() {

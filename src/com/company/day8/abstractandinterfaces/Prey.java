@@ -7,4 +7,9 @@ package com.company.day8.abstractandinterfaces;
 public interface Prey {
     void runAndHide();
     void noticePredators();
+
+    default void eat(){
+        System.out.println("prey is eating");
+    }
 }
+
