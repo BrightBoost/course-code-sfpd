@@ -1,5 +1,9 @@
 package com.company.day8.abstractandinterfaces;
 
+//predator and prey both have a default eat
+//this leads to ambiguous situation for eat on snake
+//therefore snake must implement eat
+
 public class Snake extends Mammal implements Predator, Prey {
     public Snake(String name){
         super(name);
